@@ -33,18 +33,21 @@
                 a:hover
                 {
                     color: $main-color;
+                    
                 }
 
             }
 
-
+            .wrapper-menu
+            {
+                display: block;
             .menu{
                 position: absolute;
-                top: 60px;
+                top: 56px;
                 left: 350px;
                 width: 900px;
                 height: 500px;
-            background-color: rgb(238,238,238);
+                background-color: rgb(238,238,238);
                 display: flex;
                 flex-wrap: wrap; 
                 z-index: 1;
@@ -69,6 +72,10 @@
                         margin-top: 5px;
                         font-size: 13px;
                     }
+                    a:hover
+                    {
+                        color: $main-color;
+                    }
                 }  
                     .main
                     {
@@ -76,6 +83,7 @@
                     }
                 }
             }
+        }
         }
 
         &__contacts
