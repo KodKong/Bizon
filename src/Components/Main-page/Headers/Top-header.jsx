@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom';
 
 function Top_header() {
 
@@ -21,14 +22,14 @@ function Top_header() {
          <div className="top-header">
              <div className="top-header__nav">
                  <ul>
-                     <li><a href="#">Главная</a></li>
+                     <li><NavLink to="/Main">Главная</NavLink></li>
                      <li><a href="#" class="catalog" onClick={activedMod}>Каталог</a>  
                         {
                             isEdit &&  <div className="wrapper-menu">             
                                         <div class="menu">
                                 <div class="menu__category">
                                     <ul>
-                                        <li class="main"><a href="#">Оружие</a></li>
+                                        <li class="main"><NavLink to="/Items">Оружие</NavLink></li>
                                         <li><a href="#">Нарезное</a></li>
                                         <li><a href="#">Гладкоствольное</a></li>
                                         <li><a href="#">Комиссионное</a></li>

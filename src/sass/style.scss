@@ -371,6 +371,11 @@ footer
             width: 295px;
             text-align: center; 
            
+            a{
+                text-decoration: none;
+                color: $main-color;
+            }
+
             img{
                 max-width: 200px;
                 margin: 20px 0;
