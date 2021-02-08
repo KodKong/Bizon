@@ -1,19 +1,30 @@
 import React from 'react'
+import Slider from "./Slider";
 
-function Categoryes() {
+
+function Categoryes(props) {
+
+    const arr = [
+        {photo: "./img/гладкое.png", name: "Гладкоствольное оружие"}, 
+        {photo: "./img/нарезное.png", name: "Нарезное оружие"}, 
+    ]; 
+
+
+    const arr2 = [
+        {photo: "./img/obuv.png", name: "Обувь"}, 
+        {photo: "./img/closes.jpg", name: "Одежда"}, 
+    ]; 
+
+   
+
     return (
         <section className="category-item">
         <div className="wrapper">
             <div className="first-level">
                 <div className="slider-wrapper">
                     <div className="slider">
-                        <div className="img-slider">
-                            <img src="./img/гладкое.png" alt=""></img>
-                        </div>
+                        <Slider arr={arr} />
                     </div>
-                    <button>
-                        Гладкоствольное оружие
-                    </button>
                 </div>
                 <div className="bullets">
                     <img src="./img/bullets.png" alt=""></img>
@@ -32,13 +43,8 @@ function Categoryes() {
                 <div className="closet">
                     <div className="slider-wrapper">
                         <div className="slider">
-                            <div className="img-slider">
-                                <img src="./img/closes.jpg" alt=""></img>
-                            </div>
-                        </div>
-                        <button>
-                            Одежда
-                        </button>
+                        <Slider arr={arr2} />
+                        </div>      
                     </div>
                 </div>
             </div>

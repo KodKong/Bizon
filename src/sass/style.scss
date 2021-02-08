@@ -171,6 +171,23 @@
                     max-width: 100%;
                     height: auto;
                 }
+                    .arrow-left 
+                {
+                    position: absolute;
+                    top: 45%; 
+                    left: 40px; 
+                    font-size: 3em;
+                    fill: #babac2;
+                    
+                }
+                    .arrow-right 
+                {
+                    position: absolute;
+                    top: 45%; 
+                    right: 40px; 
+                    font-size: 3em;
+                    fill: #babac2;
+                }       
             }
             
             .bullets
@@ -192,8 +209,6 @@
                     height: auto;
                 }
             }
-        
-
            
         }
 
@@ -214,6 +229,24 @@
                     max-width: 100%;
                     height: auto;
                 }
+
+                .arrow-left 
+                {
+                    position: absolute;
+                    top: 45%; 
+                    left: 40px; 
+                    font-size: 3em;
+                    fill: #babac2;
+                    
+                }
+                    .arrow-right 
+                {
+                    position: absolute;
+                    top: 45%; 
+                    right: 40px; 
+                    font-size: 3em;
+                    fill: #babac2;
+                }       
             }
 
             .presets

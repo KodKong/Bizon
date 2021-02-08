@@ -17,9 +17,6 @@ function Item(props) {
     )
 }
 
-
-
-
 function Items(props) {
 
     React.useEffect(() => {
@@ -47,9 +44,6 @@ let mapStateToProps = (state) =>
     }
 }
 
-
-
 const Items_container = connect(mapStateToProps, {getItemsAC})(Items); 
-
 
 export default Items_container
