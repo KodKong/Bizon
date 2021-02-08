@@ -1,75 +1,55 @@
+import axios from 'axios';
 import React from 'react'
+import { connect } from 'react-redux'
+import { getItemsAC } from "../../redux/actions/Items";
 
-function Items() {
+function Item(props) {
+    debugger
+    return (
+        <div className="item">
+        <a href="#">
+            <img src={props.properties.photo} alt=""></img>
+            <div className="descr">{props.properties.name}</div>
+            <div className="cost">{props.properties.cost}</div>
+            <button>В корзину</button>
+        </a>
+        </div>
+    )
+}
+
+
+
+
+function Items(props) {
+
+    React.useEffect(() => {
+       axios.get("http://localhost:3000/db/items.json")
+       .then(responce => props.getItemsAC(responce.data.items)); 
+    })
+
+
+    debugger
     return (
         <section className="items">
-    <div className="wrapper">
-        <div className="item">
-        <a href="#">
-            <img src="./img/ак103.jpg" alt=""></img>
-            <div className="descr">AK-103</div>
-            <div className="cost">80000 руб</div>
-            <button>В корзину</button>
-        </a>
+        <div className="wrapper">
+            {
+                props.items  &&  props.items.map(x => <Item properties={x} />)
+            }
         </div>
-        <div className="item">
-        <a href="#">
-            <img src="./img/ак12.jpg" alt=""></img>
-            <div className="descr">AK-12</div>
-            <div className="cost">80000 руб</div>
-            <button>В корзину</button>
-        </a>
-        </div>
-        <div className="item">
-        <a href="#">
-            <img src="./img/ак74.jpg" alt=""></img>
-            <div className="descr">AK-74</div>
-            <div className="cost">57000 руб</div>
-            <button>В корзину</button>
-        </a>
-        </div>
-        <div className="item">
-        <a href="#">
-            <img src="./img/ак74.jpg" alt=""></img>
-            <div className="descr">AK-74</div>
-            <div className="cost">57000 руб</div>
-            <button>В корзину</button>
-        </a>
-        </div>
-        <div className="item">
-        <a href="#">
-            <img src="./img/ак74.jpg" alt=""></img>
-            <div className="descr">AK-74</div>
-            <div className="cost">57000 руб</div>
-            <button>В корзину</button>
-        </a>
-        </div>
-        <div className="item"> <a href="#"><img src="./img/ак74.jpg" alt=""></img>
-            <div className="descr">AK-74</div>
-            <div className="cost">57000 руб</div>
-            <button>В корзину</button></a>
-        </div>
-        <div className="item">
-        <a href="#">
-            <img src="./img/ак74.jpg" alt=""></img>
-            <div className="descr">AK-74</div>
-            <div className="cost">57000 руб</div>
-            <button>В корзину</button>
-            </a>
-        </div>
-        <div className="item">
-        <a href="#">
-            <img src="./img/ак74.jpg" alt=""></img>
-            <div className="descr">AK-74</div>
-            <div className="cost">57000 руб</div>
-        </a>
-        <button>В корзину</button>
-        </div>
-        
-       
-    </div>
    </section>
     )
 }
 
-export default Items
+let mapStateToProps = (state) => 
+{
+    return {
+        items: state.itemsPage.items
+    }
+}
+
+
+
+const Items_container = connect(mapStateToProps, {getItemsAC})(Items); 
+
+
+export default Items_container

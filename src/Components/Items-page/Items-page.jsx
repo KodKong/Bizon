@@ -1,12 +1,12 @@
 import React from 'react'
 import Filters from "./Filters";
-import Items from "./Items";
+import Items_container from "./Items";
 
 function Items_page() {
     return (
         <>
             <Filters/>
-            <Items/>
+            <Items_container/>
         </>
     )
 }
