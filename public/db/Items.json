@@ -20,7 +20,7 @@
         }, 
         {
             "name": "AK-12",
-            "id": 1,
+            "id": 3,
             "photo": "./img/ак12.jpg",
             "calibr": "5,45x39", 
             "madeIn": "Russia", 
@@ -29,7 +29,7 @@
         }, 
         {
             "name": "AK-74",
-            "id": 2,
+            "id": 4,
             "photo": "./img/ак74.jpg",
             "calibr": "5,45x39", 
             "madeIn": "Russia", 
@@ -38,7 +38,7 @@
         },
         {
             "name": "AK-12",
-            "id": 1,
+            "id": 5,
             "photo": "./img/ак12.jpg",
             "calibr": "5,45x39", 
             "madeIn": "Russia", 
@@ -47,7 +47,7 @@
         }, 
         {
             "name": "AK-74",
-            "id": 2,
+            "id": 6,
             "photo": "./img/ак74.jpg",
             "calibr": "5,45x39", 
             "madeIn": "Russia", 
@@ -56,7 +56,7 @@
         },
         {
             "name": "AK-12",
-            "id": 1,
+            "id": 7,
             "photo": "./img/ак12.jpg",
             "calibr": "5,45x39", 
             "madeIn": "Russia", 
@@ -65,7 +65,7 @@
         }, 
         {
             "name": "AK-74",
-            "id": 2,
+            "id": 8,
             "photo": "./img/ак74.jpg",
             "calibr": "5,45x39", 
             "madeIn": "Russia", 
@@ -74,7 +74,7 @@
         },
         {
             "name": "AK-12",
-            "id": 1,
+            "id": 9,
             "photo": "./img/ак12.jpg",
             "calibr": "5,45x39", 
             "madeIn": "Russia", 
@@ -83,7 +83,7 @@
         }, 
         {
             "name": "AK-74",
-            "id": 2,
+            "id": 10,
             "photo": "./img/ак74.jpg",
             "calibr": "5,45x39", 
             "madeIn": "Russia", 
@@ -92,7 +92,7 @@
         },
         {
             "name": "AK-12",
-            "id": 1,
+            "id": 11,
             "photo": "./img/ак12.jpg",
             "calibr": "5,45x39", 
             "madeIn": "Russia", 
@@ -101,7 +101,7 @@
         }, 
         {
             "name": "AK-74",
-            "id": 2,
+            "id": 12,
             "photo": "./img/ак74.jpg",
             "calibr": "5,45x39", 
             "madeIn": "Russia", 
@@ -110,7 +110,7 @@
         },
         {
             "name": "AK-12",
-            "id": 1,
+            "id": 13,
             "photo": "./img/ак12.jpg",
             "calibr": "5,45x39", 
             "madeIn": "Russia", 
@@ -119,7 +119,7 @@
         }, 
         {
             "name": "AK-74",
-            "id": 2,
+            "id": 14,
             "photo": "./img/ак74.jpg",
             "calibr": "5,45x39", 
             "madeIn": "Russia", 
@@ -128,7 +128,7 @@
         },
         {
             "name": "AK-12",
-            "id": 1,
+            "id": 15,
             "photo": "./img/ак12.jpg",
             "calibr": "5,45x39", 
             "madeIn": "Russia", 
@@ -137,7 +137,7 @@
         }, 
         {
             "name": "AK-74",
-            "id": 2,
+            "id": 16,
             "photo": "./img/ак74.jpg",
             "calibr": "5,45x39", 
             "madeIn": "Russia", 
@@ -146,7 +146,7 @@
         },
         {
             "name": "AK-12",
-            "id": 1,
+            "id": 17,
             "photo": "./img/ак12.jpg",
             "calibr": "5,45x39", 
             "madeIn": "Russia", 
@@ -154,15 +154,15 @@
             "cost": 89000     
         }, 
         {
-            "name": "AK-74",
-            "id": 2,
+            "name": "LOLOLO",
+            "id": 18,
             "photo": "./img/ак74.jpg",
             "calibr": "5,45x39", 
             "madeIn": "Russia", 
-            "description": "I love orange",
+            "description": "5,45 мм автомат Калашникова АК-12 является перспективным индивидуальным стрелковым оружием Российской армии и других силовых ведомств, обеспечивающим еще большую боевую эффективность оружия, универсальность применения, точность и кучность стрельбы.Назначение: основной образец индивидуального оружия личного состава пехотных и других подразделений Вооруженных сил.",
             "cost": 57000     
         }
     ],
-    "totalCount": 19,
+    "totalCount": 18,
     "error": null
 }

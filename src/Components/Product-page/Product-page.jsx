@@ -1,21 +1,31 @@
 import React from 'react'
+import { withRouter } from 'react-router'
+import { getItemsAC } from "../../redux/actions/Items";
+import { connect } from 'react-redux'
+import axios from 'axios';
 
-function Product_page() {
+function Product_Page(props) {
+
+    let trueProduct = props.product.find(function(it) {
+        return it.id == props.params.item
+    }); 
+
+    console.log(trueProduct); 
     return (
         <section class="item-page">
             <div class="wrapper">
-                <img src="./img/ак12.jpg" alt=""></img>
+                <img src={trueProduct.photo} alt=""></img>
                 <div class="description">
-                        <h1>AK-12</h1>
+                        <h1>{trueProduct.name}</h1>
                     <div class="text">
-                        5,45 мм автомат Калашникова АК-12 является перспективным индивидуальным стрелковым оружием Российской армии и других силовых ведомств, обеспечивающим еще большую боевую эффективность оружия, универсальность применения, точность и кучность стрельбы.Назначение: основной образец индивидуального оружия личного состава пехотных и других подразделений Вооруженных сил.
+                        {trueProduct.description}
                     </div>
-                    <div class="calibr">Калибр: 5.45x39</div>
+                    <div class="calibr">Калибр: {trueProduct.calibr}</div>
                     <div class="made-in">
-                        Производитель: Russia
+                        Производитель:{trueProduct.madeIn}
                     </div>
                     <div class="cost">
-                    Стоимость: 57000 руб
+                    Стоимость: {trueProduct.cost} руб
                     </div>
                     <button>В корзину</button>
                 </div>
@@ -24,4 +34,32 @@ function Product_page() {
     )
 }
 
-export default Product_page
+
+function Product_Page_API(props) {
+
+    React.useEffect(() => {
+        axios.get("http://localhost:3000/db/items.json")
+        .then(responce => props.getItemsAC(responce.data.items)); 
+     }, [])
+
+    return (       
+        props.items  &&  <Product_Page product={props.items} params={props.match.params}/>
+    )
+
+}
+
+
+let mapStateToProps = (state) => 
+{
+    return {
+        items: state.itemsPage.items
+    }
+}
+
+let ItemWithRoute = withRouter(Product_Page_API)
+
+const Items_container = connect(mapStateToProps, {getItemsAC})(ItemWithRoute); 
+
+
+
+export default Items_container

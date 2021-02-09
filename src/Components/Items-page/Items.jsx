@@ -1,18 +1,19 @@
 import axios from 'axios';
 import React from 'react'
 import { connect } from 'react-redux'
+import { NavLink } from 'react-router-dom';
 import { getItemsAC } from "../../redux/actions/Items";
 
 function Item(props) {
-    debugger
+    
     return (
         <div className="item">
-        <a href="#">
+        <NavLink to={`/Product/` + props.properties.id}>
             <img src={props.properties.photo} alt=""></img>
             <div className="descr">{props.properties.name}</div>
             <div className="cost">{props.properties.cost}</div>
             <button>В корзину</button>
-        </a>
+        </NavLink>
         </div>
     )
 }
@@ -25,7 +26,6 @@ function Items(props) {
     })
 
 
-    debugger
     return (
         <section className="items">
         <div className="wrapper">

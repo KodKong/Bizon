@@ -11,7 +11,7 @@ function App() {
     <Headers/>
     <Route path="/Main" render={() => <Main_page/>}/>
     <Route path="/Items" render={() => <Items_page/>}/>
-    <Route path="/Product" render={() => <Product_page/>}/>
+    <Route path="/Product/:item" render={() => <Product_page/>}/>
     <Footer/>
     <Redirect from="/" to="/Main"/>
     </>
