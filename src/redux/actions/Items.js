@@ -7,12 +7,3 @@ export const getItemsAC = (items) =>
         items
     }
 }
-
-
-export const getItemPageAC = (item_page) => 
-{
-    return {
-        type: "GET_ITEM_PAGE", 
-        item_page
-    }
-}

@@ -13,10 +13,6 @@ const items_reducer = (state = InitialState, action) =>
         {
             return {...state, items: action.items}
         }
-        case "GET_ITEM_PAGE":
-        {
-            return {...state, item_page: action.item_page}
-        }
         default: return state
     }
 }

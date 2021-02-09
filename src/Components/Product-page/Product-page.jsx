@@ -10,21 +10,20 @@ function Product_Page(props) {
         return it.id == props.params.item
     }); 
 
-    console.log(trueProduct); 
     return (
-        <section class="item-page">
-            <div class="wrapper">
-                <img src={trueProduct.photo} alt=""></img>
-                <div class="description">
+        <section className="item-page">
+            <div className="wrapper">
+                <img src="https://avatarko.ru/img/kartinka/33/multfilm_lyagushka_32117.jpg" alt=""></img>
+                <div className="description">
                         <h1>{trueProduct.name}</h1>
-                    <div class="text">
+                    <div className="text">
                         {trueProduct.description}
                     </div>
-                    <div class="calibr">Калибр: {trueProduct.calibr}</div>
-                    <div class="made-in">
+                    <div className="calibr">Калибр: {trueProduct.calibr}</div>
+                    <div className="made-in">
                         Производитель:{trueProduct.madeIn}
                     </div>
-                    <div class="cost">
+                    <div className="cost">
                     Стоимость: {trueProduct.cost} руб
                     </div>
                     <button>В корзину</button>
