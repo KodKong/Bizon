@@ -3,6 +3,7 @@ const InitialState =
 {
     items: null, 
     productPage: null, 
+    filterItems: null
 }
 
 
@@ -14,14 +15,29 @@ const items_reducer = (state = InitialState, action) =>
         {
             return {...state, items: action.items, productPage: state.productPage}
         }
-        case "FILTER_BY_COUNTRY": 
-        {
-            debugger
-          return {...state, filterItems: state.items.filter(e => e.homeland === action.homeland)}
-        }
         case "GET_ITEMS_PAGE":
         {
             return {...state, productPage: state.items.find(e => e.id == action.page.item)}
+        }
+        case "FILTER_BY_COUNTRY": 
+        {
+          return {...state, filterItems: state.items.filter(e => e.homeland === action.homeland)}
+        }
+        case "FILTER_BY_COST_DOWN": 
+        {
+            return {...state, filterItems: state.items.sort((a, b) => b.cost-a.cost)}
+        }
+        case "FILTER_BY_COST_UP": 
+        {
+            return {...state, filterItems: state.items.sort((a, b) => a.cost-b.cost)}
+        }
+        case "FILTER_BY_TYPE":
+        {
+            return {...state, filterItems: state.items.filter(e => e.turn === action.turn)}
+        }
+        case "DELETE_FILTERS":
+        {
+            return {...state, filterItems: state.items}
         }
         default: return state
     }

@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { filtersByCountry } from "../../redux/actions/filters";
+import { filtersByCountry, deleteFilters, filtersByCostDown, filtersByCostUp, filtersByType } from "../../redux/actions/filters";
 
 function Filters_Container(props) {
     return (
@@ -8,18 +8,21 @@ function Filters_Container(props) {
         <div className="wrapper">
          <div className="filter">
              <h1>Цена</h1>
-             <div> По возрастанию<input type="checkbox" ></input></div>
-             <div> По убыванию<input type="checkbox" ></input></div>
+             <div> По порядку<input type="checkbox" onChange={() => props.deleteFilters()}></input></div>
+             <div> По возрастанию<input type="checkbox" onChange={() => props.filtersByCostUp()}></input></div>
+             <div> По убыванию<input type="checkbox" onChange={() => props.filtersByCostDown()}></input></div>
          </div>
          <div className="filter">
              <h1>Тип</h1>
-             <div>Нарезное<input type="checkbox" ></input></div>
-             <div>Гладкоствольное<input type="checkbox" ></input></div>
+             <div>Все<input type="checkbox" onChange={() => props.deleteFilters()}></input></div>
+             <div>Нарезное<input type="checkbox" onChange={() => props.filtersByType(true)}></input></div>
+             <div>Гладкоствольное<input type="checkbox" onChange={() => props.filtersByType(false)}></input></div>
          </div>
          <div className="filter">
              <h1>Производство</h1>
-             <div>Иностранное<input type="checkbox" onClick={() => props.filtersByCountry(false)}></input></div>
-             <div>Отечественное<input type="checkbox" onClick={() => props.filtersByCountry(true)} ></input></div>
+             <div>Все<input type="checkbox" onChange={() => props.deleteFilters()}></input></div>
+             <div>Иностранное<input type="checkbox" onChange={() => props.filtersByCountry(false)}></input></div>
+             <div>Отечественное<input type="checkbox" onChange={() => props.filtersByCountry(true)} ></input></div>
          </div>
         </div>
     </section>
@@ -35,7 +38,7 @@ let mapStateToProps = (state) =>
     }
 }
 
-const Filters  = connect(mapStateToProps, {filtersByCountry})(Filters_Container); 
+const Filters  = connect(mapStateToProps, {filtersByCountry, deleteFilters, filtersByCostDown, filtersByCostUp, filtersByType})(Filters_Container); 
 
 
 export default Filters

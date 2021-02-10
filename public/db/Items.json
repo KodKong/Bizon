@@ -5,7 +5,8 @@
             "id": 17,
             "photo": "./img/ак12.jpg",
             "calibr": "5,45x39", 
-            "madeIn": "Russia", 
+            "madeIn": "Russia",
+            "turn": true,  
             "homeland": true,
             "description": "I love orange",
             "cost": 89000     
@@ -16,6 +17,7 @@
             "photo": "./img/tikka-t3x-TAC_A1.png",
             "calibr": "5,45x39", 
             "madeIn": "Finland", 
+            "turn": false,  
             "homeland": false,
             "description": "Никогда еще не было винтовки, которая отвечала бы самым строгим требованиям качества для непревзойденной дальнобойной точности в этом ценовом диапазоне",
             "cost": 57000     

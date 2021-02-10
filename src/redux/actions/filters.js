@@ -17,11 +17,26 @@ export const filtersByType = (turn) =>
     }
 }
 
-export const filtersByCost = (turn) => 
+export const filtersByCostDown = (cost) => 
 {
     return {
-        type: "FILTER_BY_COST", 
-        turn
+        type: "FILTER_BY_COST_DOWN", 
+        cost
+    }
+}
+
+export const filtersByCostUp = (cost) => 
+{
+    return {
+        type: "FILTER_BY_COST_UP", 
+        cost
+    }
+}
+
+export const deleteFilters = () => 
+{
+    return {
+        type: "DELETE_FILTERS", 
     }
 }
 
