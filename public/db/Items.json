@@ -2,166 +2,25 @@
     "items": [
         {
             "name": "AK-12",
-            "id": 1,
-            "photo": "./img/ак12.jpg",
-            "calibr": "5,45x39", 
-            "madeIn": "Russia", 
-            "description": "I love orange",
-            "cost": 89000     
-        }, 
-        {
-            "name": "AK-74",
-            "id": 2,
-            "photo": "./img/ак74.jpg",
-            "calibr": "5,45x39", 
-            "madeIn": "Russia", 
-            "description": "I love orange",
-            "cost": 57000     
-        }, 
-        {
-            "name": "AK-12",
-            "id": 3,
-            "photo": "./img/ак12.jpg",
-            "calibr": "5,45x39", 
-            "madeIn": "Russia", 
-            "description": "I love orange",
-            "cost": 89000     
-        }, 
-        {
-            "name": "AK-74",
-            "id": 4,
-            "photo": "./img/ак74.jpg",
-            "calibr": "5,45x39", 
-            "madeIn": "Russia", 
-            "description": "I love orange",
-            "cost": 57000     
-        },
-        {
-            "name": "AK-12",
-            "id": 5,
-            "photo": "./img/ак12.jpg",
-            "calibr": "5,45x39", 
-            "madeIn": "Russia", 
-            "description": "I love orange",
-            "cost": 89000     
-        }, 
-        {
-            "name": "AK-74",
-            "id": 6,
-            "photo": "./img/ак74.jpg",
-            "calibr": "5,45x39", 
-            "madeIn": "Russia", 
-            "description": "I love orange",
-            "cost": 57000     
-        },
-        {
-            "name": "AK-12",
-            "id": 7,
-            "photo": "./img/ак12.jpg",
-            "calibr": "5,45x39", 
-            "madeIn": "Russia", 
-            "description": "I love orange",
-            "cost": 89000     
-        }, 
-        {
-            "name": "AK-74",
-            "id": 8,
-            "photo": "./img/ак74.jpg",
-            "calibr": "5,45x39", 
-            "madeIn": "Russia", 
-            "description": "I love orange",
-            "cost": 57000     
-        },
-        {
-            "name": "AK-12",
-            "id": 9,
-            "photo": "./img/ак12.jpg",
-            "calibr": "5,45x39", 
-            "madeIn": "Russia", 
-            "description": "I love orange",
-            "cost": 89000     
-        }, 
-        {
-            "name": "AK-74",
-            "id": 10,
-            "photo": "./img/ак74.jpg",
-            "calibr": "5,45x39", 
-            "madeIn": "Russia", 
-            "description": "I love orange",
-            "cost": 57000     
-        },
-        {
-            "name": "AK-12",
-            "id": 11,
-            "photo": "./img/ак12.jpg",
-            "calibr": "5,45x39", 
-            "madeIn": "Russia", 
-            "description": "I love orange",
-            "cost": 89000     
-        }, 
-        {
-            "name": "AK-74",
-            "id": 12,
-            "photo": "./img/ак74.jpg",
-            "calibr": "5,45x39", 
-            "madeIn": "Russia", 
-            "description": "I love orange",
-            "cost": 57000     
-        },
-        {
-            "name": "AK-12",
-            "id": 13,
-            "photo": "./img/ак12.jpg",
-            "calibr": "5,45x39", 
-            "madeIn": "Russia", 
-            "description": "I love orange",
-            "cost": 89000     
-        }, 
-        {
-            "name": "AK-74",
-            "id": 14,
-            "photo": "./img/ак74.jpg",
-            "calibr": "5,45x39", 
-            "madeIn": "Russia", 
-            "description": "I love orange",
-            "cost": 57000     
-        },
-        {
-            "name": "AK-12",
-            "id": 15,
-            "photo": "./img/ак12.jpg",
-            "calibr": "5,45x39", 
-            "madeIn": "Russia", 
-            "description": "I love orange",
-            "cost": 89000     
-        }, 
-        {
-            "name": "AK-74",
-            "id": 16,
-            "photo": "./img/ак74.jpg",
-            "calibr": "5,45x39", 
-            "madeIn": "Russia", 
-            "description": "I love orange",
-            "cost": 57000     
-        },
-        {
-            "name": "AK-12",
             "id": 17,
             "photo": "./img/ак12.jpg",
             "calibr": "5,45x39", 
             "madeIn": "Russia", 
+            "homeland": true,
             "description": "I love orange",
             "cost": 89000     
         }, 
         {
-            "name": "LOLOLO",
+            "name": "TIKKA T3X TAC A1 308WIN",
             "id": 18,
-            "photo": "./img/ак74.jpg",
+            "photo": "./img/tikka-t3x-TAC_A1.png",
             "calibr": "5,45x39", 
-            "madeIn": "Russia", 
-            "description": "5,45 мм автомат Калашникова АК-12 является перспективным индивидуальным стрелковым оружием Российской армии и других силовых ведомств, обеспечивающим еще большую боевую эффективность оружия, универсальность применения, точность и кучность стрельбы.Назначение: основной образец индивидуального оружия личного состава пехотных и других подразделений Вооруженных сил.",
+            "madeIn": "Finland", 
+            "homeland": false,
+            "description": "Никогда еще не было винтовки, которая отвечала бы самым строгим требованиям качества для непревзойденной дальнобойной точности в этом ценовом диапазоне",
             "cost": 57000     
         }
+        
     ],
     "totalCount": 18,
     "error": null

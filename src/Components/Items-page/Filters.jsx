@@ -1,6 +1,8 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { filtersByCountry } from "../../redux/actions/filters";
 
-function Filters() {
+function Filters_Container(props) {
     return (
         <section className="filters">
         <div className="wrapper">
@@ -16,12 +18,24 @@ function Filters() {
          </div>
          <div className="filter">
              <h1>Производство</h1>
-             <div>Иностранное<input type="checkbox" ></input></div>
-             <div>Отечественное<input type="checkbox" ></input></div>
+             <div>Иностранное<input type="checkbox" onClick={() => props.filtersByCountry(false)}></input></div>
+             <div>Отечественное<input type="checkbox" onClick={() => props.filtersByCountry(true)} ></input></div>
          </div>
         </div>
     </section>
     )
 }
+
+
+let mapStateToProps = (state) => 
+{
+    return {
+        filterItems: state.itemsPage.filterItems, 
+        items: state.itemsPage.items,
+    }
+}
+
+const Filters  = connect(mapStateToProps, {filtersByCountry})(Filters_Container); 
+
 
 export default Filters

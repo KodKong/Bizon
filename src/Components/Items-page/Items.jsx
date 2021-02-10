@@ -12,7 +12,7 @@ function Item(props) {
             <img src={props.properties.photo} alt=""></img>
             <div className="descr">{props.properties.name}</div>
             <div className="cost">{props.properties.cost}</div>
-            <button>В корзину</button>
+            <button>Подробнее</button>
         </NavLink>
         </div>
     )
@@ -23,15 +23,25 @@ function Items(props) {
     React.useEffect(() => {
        axios.get("http://localhost:3000/db/items.json")
        .then(responce => props.getItemsAC(responce.data.items)); 
-    })
+    }, [])
 
+    React.useEffect(() => 
+    {
+        props.getItemsAC(props.items)
+    }, [props.items])
+
+
+    if(!props.items)
+    {
+       return "загрузочка"
+    }
 
     return (
         <section className="items">
         <div className="wrapper">
-            {
-                props.items  &&  props.items.map(x => <Item properties={x} />)
-            }
+        {
+            props.filterItems ? props.filterItems.map(x => <Item properties={x}/>) : props.items.map(x => <Item properties={x}/>)
+        }
         </div>
    </section>
     )
@@ -40,7 +50,8 @@ function Items(props) {
 let mapStateToProps = (state) => 
 {
     return {
-        items: state.itemsPage.items
+        items: state.itemsPage.items, 
+        filterItems: state.itemsPage.filterItems
     }
 }
 
