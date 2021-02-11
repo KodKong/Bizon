@@ -1,8 +1,8 @@
-import axios from 'axios';
+
 import React from 'react'
 import { connect } from 'react-redux'
 import { NavLink } from 'react-router-dom';
-import { getItemsAC } from "../../redux/actions/Items";
+import { getItemsAC, getItemsThunkCreator } from "../../redux/actions/Items";
 
 function Item(props) {
     
@@ -21,8 +21,7 @@ function Item(props) {
 function Items(props) {
 
     React.useEffect(() => {
-       axios.get("http://localhost:3000/db/items.json")
-       .then(responce => props.getItemsAC(responce.data.items)); 
+        props.getItemsThunkCreator(); 
     }, [])
 
     React.useEffect(() => 
@@ -35,7 +34,7 @@ function Items(props) {
     {
        return "загрузочка"
     }
-
+    debugger
     return (
         <section className="items">
         <div className="wrapper">
@@ -55,6 +54,6 @@ let mapStateToProps = (state) =>
     }
 }
 
-const Items_container = connect(mapStateToProps, {getItemsAC})(Items); 
+const Items_container = connect(mapStateToProps, {getItemsAC, getItemsThunkCreator})(Items); 
 
 export default Items_container

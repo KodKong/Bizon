@@ -25,10 +25,12 @@ const items_reducer = (state = InitialState, action) =>
         }
         case "FILTER_BY_COST_DOWN": 
         {
+            debugger
             return {...state, filterItems: state.items.sort((a, b) => b.cost-a.cost)}
         }
         case "FILTER_BY_COST_UP": 
         {
+            debugger
             return {...state, filterItems: state.items.sort((a, b) => a.cost-b.cost)}
         }
         case "FILTER_BY_TYPE":
