@@ -29,7 +29,7 @@ function Items(props) {
         props.getItemsAC(props.items)
     }, [props.items])
 
-
+    debugger
     if(!props.items)
     {
        return "загрузочка"
